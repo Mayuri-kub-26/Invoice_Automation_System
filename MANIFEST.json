@@ -1,0 +1,64 @@
+{
+  "project_name": "Invoice Automation System",
+  "version": "1.0.0",
+  "environment": {
+    "python_version": "3.11+",
+    "os": "Windows / Linux / macOS",
+    "dependencies": ["pandas", "streamlit"]
+  },
+  "data_provenance": {
+    "source": "deterministic synthetic generation",
+    "external_data_used": false,
+    "pii_collected": false,
+    "notes": "All vendors, invoices and payment records are generated from a fixed seed. No real people, companies or bank details are included.",
+    "license": "MIT"
+  },
+  "generator": {
+    "seed": 20261022,
+    "scale_factor": 1.0,
+    "command": "python main.py generate --seed 20261022 --scale 1.0",
+    "reproducibility": "verified - identical row counts and SHA-256 hashes across two runs"
+  },
+  "volumes": {
+    "vendors": 300,
+    "purchase_orders": 1500,
+    "po_lines": 2200,
+    "goods_receipts": 1800,
+    "grn_lines": 2800,
+    "invoices": 2000,
+    "invoice_lines": 2785,
+    "ground_truth_records": 2000
+  },
+  "anomaly_distribution": {
+    "clean_matches": "1,400 invoices (70.0%)",
+    "price_variance": "200 invoices (10.0%)",
+    "quantity_mismatch": "160 invoices (8.0% - 80 partial delivery, 80 exceed PO qty)",
+    "duplicate_invoices": "100 invoices (5.0% - 50 duplicate invoice number, 50 same invoice resubmission)",
+    "missing_receipt": "80 invoices (4.0%)",
+    "tax_vendor_arithmetic_errors": "60 invoices (3.0% - 15 closed vendor, 15 tax mismatch, 15 line sum mismatch, 15 date before PO)"
+  },
+  "tolerances": {
+    "price_percentage": "1.0%",
+    "price_absolute": "$5.00",
+    "quantity": "0.0%",
+    "tax": "$0.05"
+  },
+  "routing": {
+    "BUSINESS_REQUESTER": "Quantity mismatches, unconfirmed partial deliveries",
+    "PROCESS_OWNER": "High-value price exceptions (over $500) and workflow overrides",
+    "APPROVER": "Standard price variances within department limits",
+    "OPERATIONS_ANALYST": "Missing receipts, arithmetic errors, date anomalies, tax discrepancies",
+    "SYSTEM_ADMIN": "Closed vendors, duplicate invoice suppression"
+  },
+  "artifacts": {
+    "raw_data": "data/raw",
+    "ground_truth": "data/ground_truth",
+    "processed_data": "data/processed",
+    "sql_schema": "data/sql/schema.sql",
+    "sql_seed": "data/sql/seed_data.sql",
+    "data_dictionary": "DATA_DICTIONARY.md",
+    "validation_report": "reports/validation_report.md",
+    "evaluation_report": "reports/evaluation_report.md",
+    "reproducibility_report": "reports/reproducibility_report.md"
+  }
+}
