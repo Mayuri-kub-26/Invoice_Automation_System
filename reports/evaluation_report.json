@@ -1,0 +1,75 @@
+{
+  "evaluation_metrics": {
+    "total_invoices_evaluated": 2000,
+    "true_positives": 600,
+    "true_negatives": 1400,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "leakage_rate_false_negatives": 0.0
+  },
+  "financial_safety_audit": {
+    "blocked_invoice_payment_leakage": 0,
+    "safety_control_status": "PASSED - ZERO DEFECTIVE PAYMENTS"
+  },
+  "category_level_breakdown": {
+    "NONE": {
+      "total": 1400,
+      "detected": 0,
+      "missed": 0
+    },
+    "PRICE_VARIANCE": {
+      "total": 200,
+      "detected": 200,
+      "missed": 0
+    },
+    "PARTIAL_DELIVERY": {
+      "total": 80,
+      "detected": 80,
+      "missed": 0
+    },
+    "INVOICE_EXCEEDS_PO_QUANTITY": {
+      "total": 80,
+      "detected": 80,
+      "missed": 0
+    },
+    "MISSING_RECEIPT": {
+      "total": 80,
+      "detected": 80,
+      "missed": 0
+    },
+    "DUPLICATE_INVOICE_NUMBER": {
+      "total": 50,
+      "detected": 50,
+      "missed": 0
+    },
+    "SAME_INVOICE_SUBMITTED_TWICE": {
+      "total": 50,
+      "detected": 50,
+      "missed": 0
+    },
+    "CLOSED_VENDOR": {
+      "total": 15,
+      "detected": 15,
+      "missed": 0
+    },
+    "TAX_MISMATCH": {
+      "total": 15,
+      "detected": 15,
+      "missed": 0
+    },
+    "INVOICE_TOTAL_DIFFERS_FROM_LINE_SUM": {
+      "total": 15,
+      "detected": 15,
+      "missed": 0
+    },
+    "INVOICE_DATE_BEFORE_PO_DATE": {
+      "total": 15,
+      "detected": 15,
+      "missed": 0
+    }
+  }
+}

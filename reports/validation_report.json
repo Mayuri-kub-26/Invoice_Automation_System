@@ -1,0 +1,116 @@
+{
+  "primary_key_uniqueness": {
+    "vendors_pk_unique": {
+      "passed": true,
+      "details": "300 total rows, 300 unique keys."
+    },
+    "purchase_orders_pk_unique": {
+      "passed": true,
+      "details": "1500 total rows, 1500 unique keys."
+    },
+    "po_lines_pk_unique": {
+      "passed": true,
+      "details": "2200 total rows, 2200 unique keys."
+    },
+    "goods_receipts_pk_unique": {
+      "passed": true,
+      "details": "1800 total rows, 1800 unique keys."
+    },
+    "goods_receipt_lines_pk_unique": {
+      "passed": true,
+      "details": "2800 total rows, 2800 unique keys."
+    },
+    "invoices_pk_unique": {
+      "passed": true,
+      "details": "2000 total rows, 2000 unique keys."
+    },
+    "invoice_lines_pk_unique": {
+      "passed": true,
+      "details": "2785 total rows, 2785 unique keys."
+    },
+    "approvals_pk_unique": {
+      "passed": true,
+      "details": "1400 total rows, 1400 unique keys."
+    },
+    "payments_pk_unique": {
+      "passed": true,
+      "details": "1400 total rows, 1400 unique keys."
+    },
+    "audit_events_pk_unique": {
+      "passed": true,
+      "details": "7240 total rows, 7240 unique keys."
+    }
+  },
+  "foreign_key_integrity": {
+    "purchase_orders_to_vendors_fk": {
+      "passed": true,
+      "details": "Orphan PO count: 0"
+    },
+    "po_lines_to_pos_fk": {
+      "passed": true,
+      "details": "Orphan PO Line count: 0"
+    },
+    "goods_receipts_to_pos_fk": {
+      "passed": true,
+      "details": "Orphan GRN count: 0"
+    },
+    "goods_receipt_lines_fks": {
+      "passed": true,
+      "details": "Orphan GRN Line count: 0"
+    },
+    "invoices_to_vendors_pos_fk": {
+      "passed": true,
+      "details": "Orphan Invoice count: 0"
+    },
+    "payments_to_invoices_vendors_fk": {
+      "passed": true,
+      "details": "Orphan Payment count: 0"
+    }
+  },
+  "enum_constraints": {
+    "vendor_status_valid": {
+      "passed": true,
+      "details": "Violations: 0"
+    },
+    "vendor_currency_valid": {
+      "passed": true,
+      "details": "Violations: 0"
+    },
+    "po_status_valid": {
+      "passed": true,
+      "details": "Violations: 0"
+    },
+    "invoice_status_valid": {
+      "passed": true,
+      "details": "Violations: 0"
+    },
+    "invoice_channel_valid": {
+      "passed": true,
+      "details": "Violations: 0"
+    }
+  },
+  "temporal_date_ordering": {
+    "grn_date_ge_po_date": {
+      "passed": true,
+      "details": "Violations where GRN preceded PO: 0"
+    }
+  },
+  "arithmetic_reconciliation": {
+    "po_line_sums_match_po_header": {
+      "passed": true,
+      "details": "Mismatches: 0"
+    }
+  },
+  "lifecycle_integrity": {
+    "zero_payments_for_unmatched_invoices": {
+      "passed": true,
+      "details": "Illegal payment authorizations: 0"
+    }
+  },
+  "summary": {
+    "total_checks": 24,
+    "passed_checks": 24,
+    "failed_checks": 0,
+    "status": "PASSED - ALL CONSTRAINTS SATISFIED"
+  }
+}

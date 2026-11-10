@@ -1,0 +1,78 @@
+{
+  "fixed_seed": 20261022,
+  "overall_reproducibility": "PASSED - 100% BITWISE EQUIVALENCE",
+  "file_comparisons": {
+    "vendors.csv": {
+      "rows_run_a": 300,
+      "rows_run_b": 300,
+      "rows_identical": true,
+      "sha256_run_a": "952c5a24112a7a9ba69c5dc0130917f730a3d2b0185e8c04d77cf453b4530b05",
+      "sha256_run_b": "952c5a24112a7a9ba69c5dc0130917f730a3d2b0185e8c04d77cf453b4530b05",
+      "checksums_identical": true,
+      "status": "PASS"
+    },
+    "purchase_orders.csv": {
+      "rows_run_a": 1500,
+      "rows_run_b": 1500,
+      "rows_identical": true,
+      "sha256_run_a": "81f693fe6237e7f1a3cde7cc68efa181fbcc61ce59a87da97be339d3d9a333f3",
+      "sha256_run_b": "81f693fe6237e7f1a3cde7cc68efa181fbcc61ce59a87da97be339d3d9a333f3",
+      "checksums_identical": true,
+      "status": "PASS"
+    },
+    "po_lines.csv": {
+      "rows_run_a": 2200,
+      "rows_run_b": 2200,
+      "rows_identical": true,
+      "sha256_run_a": "486a6744635a2a5a6b5ed062d6511f4f87c1919248627f54c49d8921ee77117e",
+      "sha256_run_b": "486a6744635a2a5a6b5ed062d6511f4f87c1919248627f54c49d8921ee77117e",
+      "checksums_identical": true,
+      "status": "PASS"
+    },
+    "goods_receipts.csv": {
+      "rows_run_a": 1800,
+      "rows_run_b": 1800,
+      "rows_identical": true,
+      "sha256_run_a": "b3055f1d33a7d05e6c4bb4dd701c1e039a3560528065608a1f023fc01b66df26",
+      "sha256_run_b": "b3055f1d33a7d05e6c4bb4dd701c1e039a3560528065608a1f023fc01b66df26",
+      "checksums_identical": true,
+      "status": "PASS"
+    },
+    "goods_receipt_lines.csv": {
+      "rows_run_a": 2800,
+      "rows_run_b": 2800,
+      "rows_identical": true,
+      "sha256_run_a": "0151c20612a0c546135212dfe14113ba6e485b0df3ca9d7d414245a629fcaad4",
+      "sha256_run_b": "0151c20612a0c546135212dfe14113ba6e485b0df3ca9d7d414245a629fcaad4",
+      "checksums_identical": true,
+      "status": "PASS"
+    },
+    "invoices.csv": {
+      "rows_run_a": 2000,
+      "rows_run_b": 2000,
+      "rows_identical": true,
+      "sha256_run_a": "043e468bc203a2756321a47dddb09ae3c735b8b4bcd6588093cb6c8445f2e0c4",
+      "sha256_run_b": "043e468bc203a2756321a47dddb09ae3c735b8b4bcd6588093cb6c8445f2e0c4",
+      "checksums_identical": true,
+      "status": "PASS"
+    },
+    "invoice_lines.csv": {
+      "rows_run_a": 2785,
+      "rows_run_b": 2785,
+      "rows_identical": true,
+      "sha256_run_a": "8dd91958fe162da7235722cfb05042c9a7035d221500fc5edb12ebd1a73911f0",
+      "sha256_run_b": "8dd91958fe162da7235722cfb05042c9a7035d221500fc5edb12ebd1a73911f0",
+      "checksums_identical": true,
+      "status": "PASS"
+    },
+    "ground_truth.csv": {
+      "rows_run_a": 2000,
+      "rows_run_b": 2000,
+      "rows_identical": true,
+      "sha256_run_a": "f54bff451fe93f312ec33eb044770b03822c151444ab1370658ef8a7312a56b4",
+      "sha256_run_b": "f54bff451fe93f312ec33eb044770b03822c151444ab1370658ef8a7312a56b4",
+      "checksums_identical": true,
+      "status": "PASS"
+    }
+  }
+}
